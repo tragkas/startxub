@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../assets/asset-display/icon.png">
+    <link rel="stylesheet" href="../assets/asset-css/main.css">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5MG6QWTH');</script>
+<!-- End Google Tag Manager -->
+
+<!-- General Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cash Flow to Debt Ratio Calculator - Startxub</title>
+<meta name="description" content="Calculate your cash flow to debt ratio with our easy-to-use online calculator.">
+<meta name="author" content="Startxub">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://startxub.com/calculators/calculator-cash-flow-to-debt-ratio.html">
+
+<!-- Open Graph (OG) Meta Tags -->
+<meta property="og:title" content="Cash Flow to Debt Ratio Calculator - Startxub">
+<meta property="og:description" content="Calculate your cash flow to debt ratio with our easy-to-use online calculator.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:title" content="Cash Flow to Debt Ratio Calculator - Startxub">
+<meta name="twitter:description" content="Calculate your cash flow to debt ratio with our easy-to-use online calculator.">
+<meta name="twitter:image" content="assets/og-image.png">
+
+<!-- X Card Meta Tags -->
+<meta name="x:title" content="Cash Flow to Debt Ratio Calculator - Startxub">
+<meta name="x:description" content="Calculate your cash flow to debt ratio with our easy-to-use online calculator.">
+<meta name="x:image" content="assets/og-image.png">
+
+
+
+</head>
+
+<body>
+
+    <header>
+      <nav>
+            <ul>
+    <li><a  href="../index.html">STARTXUB</a></li>
+</ul>
+            <ul>
+                <li><a href="../articles/index.html">Articles</a></li>
+                <li><a href="../directory/index.html">Directory</a></li>
+                <li><a href="../calculators/index.html">Calculators</a></li>
+                <li><a href="../index.html#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main_msg">
+        <h1 class="big-heading">Cash Flow to Debt Ratio <br> Calculator</h1>
+        <p><a href="../calculators/index.html"><i>More Calculators</i></a></p>
+    </div>
+
+    <main>
+
+<section class="bodys">
+
+    <div id="container">
+        <div id="guide">
+            <h2>Step-by-Step Guide</h2>
+            <ol>
+                <li>Enter the Net Operating Cash Flow in dollars.</li>
+                <li>Enter the Total Debt in dollars.</li>
+                <li>Click the Calculate button to determine the Cash Flow to Debt Ratio.</li>
+            </ol>
+            <h2>Formula:</h2>
+            <p>Cash Flow to Debt Ratio = (Net Operating Cash Flow / Total Debt)</p>
+        </div>
+        <div id="calculatori">
+            <h2>Cash Flow to Debt Ratio Calculator</h2>
+            <form id="cash-flow-form">
+                <label for="cash-flow">Net Operating Cash Flow ($):</label>
+                <input type="number" id="cash-flow" required><br>
+
+                <label for="total-debt">Total Debt ($):</label>
+                <input type="number" id="total-debt" required><br>
+
+                <button type="button" id="calculate-btn">Calculate</button>
+            </form>
+
+            <div id="results">
+                <h3>Cash Flow to Debt Ratio:</h3>
+                <p>Cash Flow to Debt Ratio: <span id="cash-flow-ratio"></span></p>
+                <p>Interpretation: <span id="interpretation"></span></p>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+    <script>
+        document.getElementById('calculate-btn').addEventListener('click', calculateCashFlowRatio);
+
+        function calculateCashFlowRatio() {
+            const netOperatingCashFlow = parseFloat(document.getElementById('cash-flow').value);
+            const totalDebt = parseFloat(document.getElementById('total-debt').value);
+
+            // Calculate Cash Flow to Debt Ratio
+            const cashFlowRatio = (netOperatingCashFlow / totalDebt).toFixed(2);
+
+            // Interpretation of results
+            let interpretation = '';
+            if (!isNaN(cashFlowRatio)) {
+                if (cashFlowRatio >= 1) {
+                    interpretation = `The Cash Flow to Debt Ratio is ${cashFlowRatio}. Your cash flow can cover debt payments.`;
+                } else {
+                    interpretation = `The Cash Flow to Debt Ratio is ${cashFlowRatio}. Your cash flow may not be sufficient to cover debt payments.`;
+                }
+            } else {
+                interpretation = "Please ensure all inputs are valid.";
+            }
+
+            document.getElementById('cash-flow-ratio').textContent = isNaN(cashFlowRatio) ? 'N/A' : cashFlowRatio;
+            document.getElementById('interpretation').textContent = interpretation;
+        }
+    </script>
+
+    </main>
+
+    <footer class="footeri">
+
+        <p>
+        <small> © 2023 Startxub. </small>
+        </p>
+
+        <p>
+            <small> <a href="mailto: startxub@gmail.com">Contact info</a> | <a href="https://docs.google.com/document/d/1tuk5yQU2iWSuNS6s71AlD7EAeYrniHF-GF7QzNBxi6E/edit?usp=drive_link">Privacy Policy</a> | <a href="https://docs.google.com/document/d/1JCeviS153SUqNb8yuFnRfiIGYRPqXfetvSKrS686Et0/edit?usp=drive_link">Terms and Conditions</a> | <a href="https://docs.google.com/document/d/1CtLX7zD7M4tlIyakONhZAGseKjqp_HDoRxFBtcTD3gE/edit?usp=drive_link">Cookies Policy</a> | <a href="#open_preferences_center" id="open_preferences_center">Update Cookies</a> </small>
+        </p>
+
+        <p>
+            <small>  <a href="../articles/index.html">Articles</a> | <a href="../directory/index.html">Directory</a> | <a href="../calculators/index.html">Calculators</a> | <a href="../index.html#pricing">Pricing</a> | <a href="../index.html#faq">Faq</a> </small>
+        </p>
+
+        
+
+  </footer>
+
+</body>
+
+</html>

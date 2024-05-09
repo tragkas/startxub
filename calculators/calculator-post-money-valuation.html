@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../assets/asset-display/icon.png">
+    <link rel="stylesheet" href="../assets/asset-css/main.css">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5MG6QWTH');</script>
+<!-- End Google Tag Manager -->
+    
+<!-- General Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post Money Valuation - Startxub</title>
+<meta name="description" content="Calculate your post money valuation with our easy-to-use online calculator.">
+<meta name="author" content="Startxub">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://startxub.com/calculators/calculator-post-money-valuation.html">
+
+<!-- Open Graph (OG) Meta Tags -->
+<meta property="og:title" content="Post Money Valuation - Startxub">
+<meta property="og:description" content="Calculate your post money valuation with our easy-to-use online calculator.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:title" content="Post Money Valuation - Startxub">
+<meta name="twitter:description" content="Calculate your post money valuation with our easy-to-use online calculator.">
+<meta name="twitter:image" content="assets/og-image.png">
+
+<!-- X Card Meta Tags -->
+<meta name="x:title" content="Post Money Valuation - Startxub">
+<meta name="x:description" content="Calculate your post money valuation with our easy-to-use online calculator.">
+<meta name="x:image" content="assets/og-image.png">
+
+
+</head>
+
+<body>
+
+    <header>
+      <nav>
+            <ul>
+    <li><a  href="../index.html">STARTXUB</a></li>
+</ul>
+            <ul>
+                <li><a href="../articles/index.html">Articles</a></li>
+                <li><a href="../directory/index.html">Directory</a></li>
+                <li><a href="../calculators/index.html">Calculators</a></li>
+                <li><a href="../index.html#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main_msg">
+        <h1 class="big-heading">Post-Money<br> Valuation</h1>
+        <p><a href="../calculators/index.html"><i>More Calculators</i></a></p>
+    </div>
+
+    <main>
+
+<section class="bodys">
+
+    <div id="container">
+        <div id="guide">
+            <h2>Step-by-Step Guide</h2>
+            <ol>
+                <li>Enter the pre-money valuation of your startup.</li>
+                <li>Enter the amount of funding received.</li>
+                <li>Click the Calculate button to determine the Post-Money Valuation.</li>
+            </ol>
+            <h2>Formula:</h2>
+            <p>Post-Money Valuation = Pre-Money Valuation + Funding Received</p>
+        </div>
+        <div id="calculatori">
+            <h2>Post-Money Valuation Calculator</h2>
+            <form id="post-money-valuation-form">
+                <label for="pre-money-valuation">Pre-Money Valuation ($):</label>
+                <input type="number" id="pre-money-valuation" required><br>
+
+                <label for="funding-received">Funding Received ($):</label>
+                <input type="number" id="funding-received" required><br>
+
+                <button type="button" id="calculate-btn">Calculate</button>
+            </form>
+
+            <div id="results">
+                <h3>Post-Money Valuation:</h3>
+                <p>Post-Money Valuation: <span id="post-money-valuation"></span></p>
+                <p>Interpretation: <span id="interpretation"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('calculate-btn').addEventListener('click', calculatePostMoneyValuation);
+
+        function calculatePostMoneyValuation() {
+            const preMoneyValuation = parseFloat(document.getElementById('pre-money-valuation').value);
+            const fundingReceived = parseFloat(document.getElementById('funding-received').value);
+
+            // Calculate Post-Money Valuation
+            const postMoneyValuation = (preMoneyValuation + fundingReceived).toFixed(2);
+
+            // Interpretation of results
+            let interpretation = '';
+            if (!isNaN(postMoneyValuation)) {
+                interpretation = `The Post-Money Valuation is approximately $${postMoneyValuation}. This metric represents the estimated value of your startup after external funding.`;
+            } else {
+                interpretation = "Please ensure all inputs are valid.";
+            }
+
+            document.getElementById('post-money-valuation').textContent = isNaN(postMoneyValuation) ? 'N/A' : `$${postMoneyValuation}`;
+            document.getElementById('interpretation').textContent = interpretation;
+        }
+    </script>
+        
+ 
+
+
+
+         
+
+    </main>
+
+    <footer class="footeri">
+
+        <p>
+        <small> © 2023 Startxub. </small>
+        </p>
+
+        <p>
+            <small> <a href="mailto: startxub@gmail.com">Contact info</a> | <a href="https://docs.google.com/document/d/1tuk5yQU2iWSuNS6s71AlD7EAeYrniHF-GF7QzNBxi6E/edit?usp=drive_link">Privacy Policy</a> | <a href="https://docs.google.com/document/d/1JCeviS153SUqNb8yuFnRfiIGYRPqXfetvSKrS686Et0/edit?usp=drive_link">Terms and Conditions</a> | <a href="https://docs.google.com/document/d/1CtLX7zD7M4tlIyakONhZAGseKjqp_HDoRxFBtcTD3gE/edit?usp=drive_link">Cookies Policy</a> | <a href="#open_preferences_center" id="open_preferences_center">Update Cookies</a> </small>
+        </p>
+        
+        <p>
+            <small>  <a href="../articles/index.html">Articles</a> | <a href="../directory/index.html">Directory</a> | <a href="../calculators/index.html">Calculators</a> | <a href="../index.html#pricing">Pricing</a> | <a href="../index.html#faq">Faq</a> </small>
+        </p>
+
+
+        
+  </footer>
+
+  
+</body>
+
+</html>

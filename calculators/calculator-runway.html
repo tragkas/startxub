@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../assets/asset-display/icon.png">
+    <link rel="stylesheet" href="../assets/asset-css/main.css">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5MG6QWTH');</script>
+<!-- End Google Tag Manager -->
+
+<!-- General Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Runway Calculator - Startxub</title>
+<meta name="description" content="Calculate your runway with our easy-to-use online calculator.">
+<meta name="author" content="Startxub">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://startxub.com/calculators/calculator-runway.html">
+
+<!-- Open Graph (OG) Meta Tags -->
+<meta property="og:title" content="Runway Calculator - Startxub">
+<meta property="og:description" content="Calculate your runway with our easy-to-use online calculator.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:title" content="Runway Calculator - Startxub">
+<meta name="twitter:description" content="Calculate your runway with our easy-to-use online calculator.">
+<meta name="twitter:image" content="assets/og-image.png">
+
+<!-- X Card Meta Tags -->
+<meta name="x:title" content="Runway Calculator - Startxub">
+<meta name="x:description" content="Calculate your runway with our easy-to-use online calculator.">
+<meta name="x:image" content="assets/og-image.png">
+
+</head>
+
+<body>
+
+    <header>
+      <nav>
+            <ul>
+    <li><a  href="../index.html">STARTXUB</a></li>
+</ul>
+            <ul>
+                <li><a href="../articles/index.html">Articles</a></li>
+                <li><a href="../directory/index.html">Directory</a></li>
+                <li><a href="../calculators/index.html">Calculators</a></li>
+                <li><a href="../index.html#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main_msg">
+        <h1 class="big-heading">Runway <br> Calculator</h1>
+        <p><a href="../calculators/index.html"><i>More Calculators</i></a></p>
+    </div>
+
+    <main>
+
+<section class="bodys">
+
+    <div id="container">
+        <div id="guide">
+            <h2>Step-by-Step Guide</h2>
+            <ol>
+                <li>Enter the Current Cash Reserves in dollars.</li>
+                <li>Enter the Average Monthly Expenses in dollars.</li>
+                <li>Click the Calculate button to estimate the Runway.</li>
+            </ol>
+            <h2>Formula:</h2>
+            <p>Runway (in months) = Current Cash Reserves / Average Monthly Expenses</p>
+        </div>
+        <div id="calculatori">
+            <h2>Runway Calculator</h2>
+            <form id="runway-form">
+                <label for="current-cash-reserves">Current Cash Reserves ($):</label>
+                <input type="number" id="current-cash-reserves" required><br>
+
+                <label for="average-monthly-expenses">Average Monthly Expenses ($):</label>
+                <input type="number" id="average-monthly-expenses" required><br>
+
+                <button type="button" id="calculate-btn">Calculate</button>
+            </form>
+
+            <div id="results">
+                <h3>Estimated Runway:</h3>
+                <p>Runway: <span id="runway"></span> months</p>
+                <p>Interpretation: <span id="interpretation"></span></p>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+    <script>
+        document.getElementById('calculate-btn').addEventListener('click', calculateRunway);
+
+        function calculateRunway() {
+            const currentCashReserves = parseFloat(document.getElementById('current-cash-reserves').value);
+            const averageMonthlyExpenses = parseFloat(document.getElementById('average-monthly-expenses').value);
+
+            // Calculate Runway (in months)
+            const runway = (currentCashReserves / averageMonthlyExpenses).toFixed(2);
+
+            // Interpretation of results
+            let interpretation = '';
+            if (!isNaN(runway) && runway >= 0) {
+                interpretation = `The estimated Runway is approximately ${runway} months. This represents the duration your startup can operate before needing additional funding.`;
+            } else {
+                interpretation = "Please ensure all inputs are valid.";
+            }
+
+            document.getElementById('runway').textContent = isNaN(runway) ? 'N/A' : runway;
+            document.getElementById('interpretation').textContent = interpretation;
+        }
+    </script>
+
+    </main>
+
+    <footer class="footeri">
+
+        <p>
+        <small> © 2023 Startxub. </small>
+        </p>
+
+        <p>
+            <small> <a href="mailto: startxub@gmail.com">Contact info</a> | <a href="https://docs.google.com/document/d/1tuk5yQU2iWSuNS6s71AlD7EAeYrniHF-GF7QzNBxi6E/edit?usp=drive_link">Privacy Policy</a> | <a href="https://docs.google.com/document/d/1JCeviS153SUqNb8yuFnRfiIGYRPqXfetvSKrS686Et0/edit?usp=drive_link">Terms and Conditions</a> | <a href="https://docs.google.com/document/d/1CtLX7zD7M4tlIyakONhZAGseKjqp_HDoRxFBtcTD3gE/edit?usp=drive_link">Cookies Policy</a> | <a href="#open_preferences_center" id="open_preferences_center">Update Cookies</a> </small>
+        </p>
+
+        <p>
+            <small>  <a href="../articles/index.html">Articles</a> | <a href="../directory/index.html">Directory</a> | <a href="../calculators/index.html">Calculators</a> | <a href="../index.html#pricing">Pricing</a> | <a href="../index.html#faq">Faq</a> </small>
+        </p>
+
+
+
+  </footer>
+
+</body>
+
+</html>

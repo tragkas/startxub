@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../assets/asset-display/icon.png">
+    <link rel="stylesheet" href="../assets/asset-css/main.css">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5MG6QWTH');</script>
+<!-- End Google Tag Manager -->
+    
+<!-- General Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAC Payback Period Calculator - Startxub</title>
+<meta name="description" content="Calculate your cac payback period with our easy-to-use online calculator.">
+<meta name="author" content="Startxub">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://startxub.com/calculators/calculator-cac-payback-period.html">
+
+<!-- Open Graph (OG) Meta Tags -->
+<meta property="og:title" content="CAC Payback Period Calculator - Startxub">
+<meta property="og:description" content="Calculate your cac payback period with our easy-to-use online calculator.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:title" content="CAC Payback Period Calculator - Startxub">
+<meta name="twitter:description" content="Calculate your cac payback period with our easy-to-use online calculator.">
+<meta name="twitter:image" content="assets/og-image.png">
+
+<!-- X Card Meta Tags -->
+<meta name="x:title" content="CAC Payback Period Calculator - Startxub">
+<meta name="x:description" content="Calculate your cac payback period with our easy-to-use online calculator.">
+<meta name="x:image" content="assets/og-image.png">
+
+
+</head>
+
+<body>
+
+    <header>
+      <nav>
+            <ul>
+    <li><a  href="../index.html">STARTXUB</a></li>
+</ul>
+            <ul>
+                <li><a href="../articles/index.html">Articles</a></li>
+                <li><a href="../directory/index.html">Directory</a></li>
+                <li><a href="../calculators/index.html">Calculators</a></li>
+                <li><a href="../index.html#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main_msg">
+        <h1 class="big-heading">CAC Payback Period<br> Calculator</h1>
+        <p><a href="../calculators/index.html"><i>More Calculators</i></a></p>
+    </div>
+
+    <main>
+
+<section class="bodys">
+
+    <div id="container">
+        <div id="guide">
+            <h2>Step-by-Step Guide</h2>
+            <ol>
+                <li>Enter the Customer Acquisition Cost (CAC).</li>
+                <li>Enter the Average Monthly Gross Margin per Customer.</li>
+                <li>Click the Calculate button to determine the CAC Payback Period.</li>
+            </ol>
+            <h2>Formula:</h2>
+            <p>CAC Payback Period = CAC / Average Monthly Gross Margin per Customer</p>
+        </div>
+        <div id="calculatori">
+            <h2>CAC Payback Period Calculator</h2>
+            <form id="cac-payback-form">
+                <label for="cac">Customer Acquisition Cost (CAC):</label>
+                <input type="number" id="cac" required><br>
+
+                <label for="avg-monthly-gross-margin">Average Monthly Gross Margin per Customer ($):</label>
+                <input type="number" id="avg-monthly-gross-margin" required><br>
+
+                <button type="button" id="calculate-btn">Calculate</button>
+            </form>
+
+            <div id="results">
+                <h3>CAC Payback Period:</h3>
+                <p>CAC Payback Period: <span id="cac-payback-period"></span> months</p>
+                <p>Interpretation: <span id="interpretation"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('calculate-btn').addEventListener('click', calculateCacPaybackPeriod);
+
+        function calculateCacPaybackPeriod() {
+            const cac = parseFloat(document.getElementById('cac').value);
+            const avgMonthlyGrossMargin = parseFloat(document.getElementById('avg-monthly-gross-margin').value);
+
+            // Calculate CAC Payback Period
+            const cacPaybackPeriod = cac / avgMonthlyGrossMargin;
+
+            // Interpretation of results
+            let interpretation = '';
+            if (!isNaN(cacPaybackPeriod) && isFinite(cacPaybackPeriod) && cacPaybackPeriod >= 0) {
+                interpretation = `The CAC Payback Period is approximately ${cacPaybackPeriod.toFixed(2)} months. This metric represents the time it takes to recover the cost of acquiring a customer through their contributions.`;
+            } else {
+                interpretation = "Please ensure all inputs are valid.";
+            }
+
+            document.getElementById('cac-payback-period').textContent = isNaN(cacPaybackPeriod) ? 'N/A' : cacPaybackPeriod.toFixed(2);
+            document.getElementById('interpretation').textContent = interpretation;
+        }
+    </script>
+            
+ 
+
+
+
+         
+
+    </main>
+
+    <footer class="footeri">
+
+        <p>
+        <small> © 2023 Startxub. </small>
+        </p>
+
+        <p>
+            <small> <a href="mailto: startxub@gmail.com">Contact info</a> | <a href="https://docs.google.com/document/d/1tuk5yQU2iWSuNS6s71AlD7EAeYrniHF-GF7QzNBxi6E/edit?usp=drive_link">Privacy Policy</a> | <a href="https://docs.google.com/document/d/1JCeviS153SUqNb8yuFnRfiIGYRPqXfetvSKrS686Et0/edit?usp=drive_link">Terms and Conditions</a> | <a href="https://docs.google.com/document/d/1CtLX7zD7M4tlIyakONhZAGseKjqp_HDoRxFBtcTD3gE/edit?usp=drive_link">Cookies Policy</a> | <a href="#open_preferences_center" id="open_preferences_center">Update Cookies</a> </small>
+        </p>
+        
+        <p>
+            <small>  <a href="../articles/index.html">Articles</a> | <a href="../directory/index.html">Directory</a> | <a href="../calculators/index.html">Calculators</a> | <a href="../index.html#pricing">Pricing</a> | <a href="../index.html#faq">Faq</a> </small>
+        </p>
+
+
+        
+  </footer>
+
+  
+</body>
+
+</html>

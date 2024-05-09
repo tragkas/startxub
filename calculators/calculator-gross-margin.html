@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../assets/asset-display/icon.png">
+    <link rel="stylesheet" href="../assets/asset-css/main.css">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5MG6QWTH');</script>
+<!-- End Google Tag Manager -->
+
+<!-- General Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gross Margin Calculator - Startxub</title>
+<meta name="description" content="Calculate your gross margin with our easy-to-use online calculator.">
+<meta name="author" content="Startxub">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://startxub.com/calculators/calculator-gross-margin.html">
+
+<!-- Open Graph (OG) Meta Tags -->
+<meta property="og:title" content="Gross Margin Calculator - Startxub">
+<meta property="og:description" content="Calculate your gross margin with our easy-to-use online calculator.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:title" content="Gross Margin Calculator - Startxub">
+<meta name="twitter:description" content="Calculate your gross margin with our easy-to-use online calculator.">
+<meta name="twitter:image" content="assets/og-image.png">
+
+<!-- X Card Meta Tags -->
+<meta name="x:title" content="Gross Margin Calculator - Startxub">
+<meta name="x:description" content="Calculate your gross margin with our easy-to-use online calculator.">
+<meta name="x:image" content="assets/og-image.png">
+
+
+</head>
+
+<body>
+
+    <header>
+      <nav>
+            <ul>
+    <li><a  href="../index.html">STARTXUB</a></li>
+</ul>
+            <ul>
+                <li><a href="../articles/index.html">Articles</a></li>
+                <li><a href="../directory/index.html">Directory</a></li>
+                <li><a href="../calculators/index.html">Calculators</a></li>
+                <li><a href="../index.html#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main_msg">
+        <h1 class="big-heading">Gross Margin <br> Calculator</h1>
+        <p><a href="../calculators/index.html"><i>More Calculators</i></a></p>
+    </div>
+
+    <main>
+
+<section class="bodys">
+
+    <div id="container">
+        <div id="guide">
+            <h2>Step-by-Step Guide</h2>
+            <ol>
+                <li>Enter the Total Revenue in dollars.</li>
+                <li>Enter the Cost of Goods Sold (COGS) in dollars.</li>
+                <li>Click the Calculate button to determine the Gross Margin.</li>
+            </ol>
+            <h2>Formula:</h2>
+            <p>Gross Margin (%) = ((Total Revenue - COGS) / Total Revenue) * 100%</p>
+        </div>
+        <div id="calculatori">
+            <h2>Gross Margin Calculator</h2>
+            <form id="gross-margin-form">
+                <label for="total-revenue">Total Revenue ($):</label>
+                <input type="number" id="total-revenue" required><br>
+
+                <label for="cogs">Cost of Goods Sold (COGS) ($):</label>
+                <input type="number" id="cogs" required><br>
+
+                <button type="button" id="calculate-btn">Calculate</button>
+            </form>
+
+            <div id="results">
+                <h3>Gross Margin:</h3>
+                <p>Gross Margin: <span id="gross-margin"></span>%</p>
+                <p>Interpretation: <span id="interpretation"></span></p>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+    <script>
+        document.getElementById('calculate-btn').addEventListener('click', calculateGrossMargin);
+
+        function calculateGrossMargin() {
+            const totalRevenue = parseFloat(document.getElementById('total-revenue').value);
+            const cogs = parseFloat(document.getElementById('cogs').value);
+
+            // Calculate Gross Margin (%)
+            const grossMargin = (((totalRevenue - cogs) / totalRevenue) * 100).toFixed(2);
+
+            // Interpretation of results
+            let interpretation = '';
+            if (!isNaN(grossMargin)) {
+                interpretation = `The Gross Margin is approximately ${grossMargin}%. This indicates the profitability after accounting for the cost of goods sold. A higher gross margin is generally more favorable.`;
+            } else {
+                interpretation = "Please ensure all inputs are valid.";
+            }
+
+            document.getElementById('gross-margin').textContent = isNaN(grossMargin) ? 'N/A' : `${grossMargin}%`;
+            document.getElementById('interpretation').textContent = interpretation;
+        }
+    </script>
+
+    </main>
+
+    <footer class="footeri">
+
+        <p>
+        <small> © 2023 Startxub. </small>
+        </p>
+
+        <p>
+            <small> <a href="mailto: startxub@gmail.com">Contact info</a> | <a href="https://docs.google.com/document/d/1tuk5yQU2iWSuNS6s71AlD7EAeYrniHF-GF7QzNBxi6E/edit?usp=drive_link">Privacy Policy</a> | <a href="https://docs.google.com/document/d/1JCeviS153SUqNb8yuFnRfiIGYRPqXfetvSKrS686Et0/edit?usp=drive_link">Terms and Conditions</a> | <a href="https://docs.google.com/document/d/1CtLX7zD7M4tlIyakONhZAGseKjqp_HDoRxFBtcTD3gE/edit?usp=drive_link">Cookies Policy</a> | <a href="#open_preferences_center" id="open_preferences_center">Update Cookies</a> </small>
+        </p>
+
+        <p>
+            <small>  <a href="../articles/index.html">Articles</a> | <a href="../directory/index.html">Directory</a> | <a href="../calculators/index.html">Calculators</a> | <a href="../index.html#pricing">Pricing</a> | <a href="../index.html#faq">Faq</a> </small>
+        </p>
+
+
+
+  </footer>
+
+</body>
+
+</html>
